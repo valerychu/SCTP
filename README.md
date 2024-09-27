@@ -82,10 +82,39 @@ Check on spatial transcriptomic data for required information.
 
 ## Malignancy prediction with SCTP-CRC model
 
+### Prediciton for single-cell RNA-seq data
+
+We begin by visualizing the cells, categorized by types as annotated in the original study, presenting only non-immune cells. These are classified into Endothelial cells (E), Fibroblasts (F), and Tumor cells (Tu), which are further subdivided into subclusters shown below:
+
+```{r}
+DimPlot(sc_dataset, group.by  = "cluster", reduction="tsne")+ggtitle("Cell type")+
+  theme(legend.position = "bottom", legend.key.size = unit(2, 'mm'))
+```
+
+Using the provided input, we employ SCTP-CRC to estimate the likelihood of CRC tumor of each cell.
+
+```{r}
+sc_dataset <- SCTP_CRC(my_seurat = sc_dataset)
+```
+
+The predicted malignancy of each cell is stored as an new annotation "malignancy' in the metadata of the output Seurat object.
+
+```{r}
+names(sc_dataset@meta.data)
+```
+
+The results can subsequently be visualized using TSNE or UMAP plots. A value closer to 1 signifies a higher malignancy level in the corresponding spots, whereas a value close to 0 suggests a normal state.
+
+```{r}
+FeaturePlot(sc_dataset, features = "malignancy", reduction="tsne", )+
+  scale_color_gradientn(colours = col_mal)
+```
+
+When compared to the original cell type annotations, it is evident that a significant number of tumor cells have been assigned high malignancy scores, while non-tumor cells have been allocated low malignancy scores.
 
 ### Prediciton for spatial transcriptomic data
 
-We present an example using spatial transcriptomic data for prediction. Utilizing a preloaded ST Seurat object, we employ the `SCTP_CRC` function to predict the likelihood of tumor presence in each spot.
+Next, We present an example using spatial transcriptomic data for prediction. Utilizing a preloaded ST Seurat object, we employ the `SCTP_CRC` function to predict the likelihood of tumor presence in each spot.
 
 
 ```{r}
