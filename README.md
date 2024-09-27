@@ -1,5 +1,6 @@
 # SCTP
 Single-Cell and Tissue Phenotype prediction 
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/2c2180b5-aa40-4f5b-9d58-3449ab390b5f">
 
 ## Introduction
 
