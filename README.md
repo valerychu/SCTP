@@ -10,7 +10,7 @@ The SCTP R package contains the proposed SCTP (Single Cell Tissue Phenotype pred
 <img width="416" alt="image" src="https://github.com/user-attachments/assets/2c2180b5-aa40-4f5b-9d58-3449ab390b5f">
 
 
-In this tutorial, we provide multiple examples to assist you in applying SCTP to real-world applications. It encompasses instructions for estimating the likelihood of colorectal cancer using a pre-trained model and guides on constructing a new SCTP model using datasets supplied by yourself.
+In this tutorial, we provide multiple examples to assist you in applying SCTP to real-world applications. It encompasses instructions for estimating the likelihood of colorectal cancer using a pre-trained model. Downtream analysis and instructions on constructing a new SCTP model using your own datasets can be found in Tutorial.
 
 ## Installation
 
