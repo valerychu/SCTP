@@ -2,11 +2,13 @@
 Single-Cell and Tissue Phenotype prediction 
 
 
-<img width="416" alt="image" src="https://github.com/user-attachments/assets/2c2180b5-aa40-4f5b-9d58-3449ab390b5f">
 
 ## Introduction
 
 The SCTP R package contains the proposed SCTP (Single Cell Tissue Phenotype prediction) method. SCTP provides a valuable approach for analyzing and understanding the cellular malignancy within the tumor microenvironment from an innovative and integrative perspective by combining the essential information from the bulk sample phenotype, single cell composition and cellular special distribution, which would be overlooked in traditional tissue pathological slice. As an automated tissue phenotype prediction model, SCTP facilitates a more profound understanding of tumor microenvironments, enables quantitative characterization of cancer hallmarks, and elucidates the underlying complex molecular and cellular interplay. 
+
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/2c2180b5-aa40-4f5b-9d58-3449ab390b5f">
+
 
 In this tutorial, we provide multiple examples to assist you in applying SCTP to real-world applications. It encompasses instructions for estimating the likelihood of colorectal cancer using a pre-trained model and guides on constructing a new SCTP model using datasets supplied by yourself.
 
